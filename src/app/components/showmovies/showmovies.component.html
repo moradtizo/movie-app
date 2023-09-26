@@ -1,0 +1,62 @@
+
+
+<div class="row imgch">
+  <img class="img-fluid " [src]="'https://image.tmdb.org/t/p/original'+details.backdrop_path  " alt="">
+
+
+</div>
+
+<div class=" mt-3 main text-light">
+  <div class="carousel-caption d-none text-light d-md-block">
+    <h5 class="text-info " style="font-size:x-large;">{{ details.original_title }} <i class="fa fa-language" aria-hidden="true"></i><span class="text-danger">{{ details.original_language }}</span></h5>
+    <p>{{ details.overview }}.</p>
+    <div>
+
+      <!-- <button class="btn btn-outline-dark rounded-5 mx-2">Watch Now</button> -->
+      <button [routerLink]="['similar']" type="button" class="btn btn-outline-link rounded-2 me-2">Similar</button>
+      <button [routerLink]="['actors']"type="button" class="btn btn-outline-link rounded-2 me-2">Actors</button>
+      <button [routerLink]="['watch']" class="btn btn-outline-link rounded-5 me-2 text-info" style="height: 100%;font-size: large;font-family:Arial, Helvetica, sans-serif;">Watch Now <i class="fa fa-play-circle" aria-hidden="true" ></i></button>
+      <button [routerLink]="['images']"  type="button" class="btn btn-outline-link rounded-2 me-2">Images</button>
+      <button [routerLink]="['videos']"type="button" class="btn btn-outline-link rounded-2 me-2">Videos</button>
+    </div>
+  </div>
+
+
+
+
+
+<div class="col-md-12">
+
+
+  <!-- <div class=" mx-3  col-md-9  ">
+     <img class="img-fluid imgd" [src]="'https://image.tmdb.org/t/p/original'+details.poster_path " alt="">
+  </div> -->
+</div>
+  <!-- <div class="col-md-9">
+    <h1 class="my-4 mx-auto text-light" >{{ details.original_title}} <span class="text-dark">({{details.release_date | date :'yyyy'}})</span></h1>
+    <h6 class="text-light">{{details.release_date | date :'yyyy-mm-dd'}} <span>.</span> <span>({{ details.original_language }})</span><span *ngFor="let genres of details.genres">
+      <h6 class="text-danger">.{{ genres.name }}</h6>
+    </span></h6>
+
+    <div class="text-start over">
+      <h4 class="my-3 text-light col-md-4"><span class="text-info">O</span>verview</h4>
+    <p class=" text-light fs-4 text fst-lighter m-4">{{ details.overview }}</p>
+  </div>
+
+  </div> -->
+
+</div>
+<div style="position: relative; padding-top: 56.25%;">
+  <iframe src="https://www.youtube.com/embed/fmdLsdmYzTo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" title="YouTube video" allowfullscreen></iframe>
+</div>
+
+
+
+
+
+
+
+
+
+<router-outlet></router-outlet>
+

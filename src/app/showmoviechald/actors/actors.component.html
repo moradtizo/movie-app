@@ -1,0 +1,12 @@
+<div class="container-fluid">
+  <div class="d-flex">
+    <div class="card  my-2 " *ngFor="let ite of CreditsMovie">
+      <img *ngIf="!ite.profile_path" src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXJxYx_5I3nVr3oJdVp8jpvvELUKjK1PtL1G6hCRyNPK1QNptgSkIxpEeXmiCdQIY8yMI&usqp=CAU" class="card-img-top" alt="Hollywood Sign on The Hill"/>
+      <img *ngIf="ite.profile_path" [src]="'https://image.tmdb.org/t/p/w300'+ite.profile_path " class="card-img-top" alt="Hollywood Sign on The Hill"/>
+      <div class="card-body">
+        <h5 class="card-title text-info" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">{{ ite.name }}</h5>
+        <!-- <p class="card-text"> <span class="text-bg-success">{{ ite.popularity | number:'1.0-0'}}</span> </p> -->
+    </div>
+    </div>
+</div>
+

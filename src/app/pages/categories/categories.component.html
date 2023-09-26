@@ -1,0 +1,47 @@
+
+   <div class="row">
+    <div class=" row col-md-4 mx-auto mt-2 ">
+    <select (change)="displayMovie()" class="form-select "  [(ngModel)]="catName">
+       <option selected *ngFor="let item of genre" [ngValue]="item.id" >{{ item.name }}</option>
+    </select>
+
+    <!-- <div >
+      <label>Genres:</label>
+      <div *ngFor="let item of genre" >
+        <input type="checkbox" [(ngModel)]="item.checked"  (change)="displayMovie()" /> {{ item.name }}
+      </div>
+    </div> -->
+
+  <!-- <select class="form-select" (change)="displayMovie()" multiple aria-label="multiple select example"[(ngModel)]="catName">
+    <option selected *ngFor="let item of genre" [ngValue]="item.id">{{ item.name }}</option>
+  </select> -->
+
+<!-- <button (click)="sidebarVisible = true" class="btn btn-outline-info" >genre</button> -->
+  </div>
+</div>
+  <div class="row mt-4">
+    <div class="col-md-2 col-lg-3 col-xl-2 col-sm-6 my-2" *ngFor="let popula of pop">
+        <app-card [popularM]="popula"></app-card>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6  mx-auto">
+        <p-paginator (onPageChange)="onPageChange($event)"  [rows]="20" [totalRecords]="totalpage"   ></p-paginator>
+    </div>
+</div>
+
+
+<!-- <div class="card flex justify-content-center">
+  <p-sidebar [(visible)]="sidebar">
+      <h3>Sidebar</h3>
+      <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+  </p-sidebar>
+
+</div>
+
+
+
+<button (click)="sidebar=true"><h6>fff</h6></button> -->

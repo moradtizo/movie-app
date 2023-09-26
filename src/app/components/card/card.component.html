@@ -1,0 +1,18 @@
+
+
+
+    <div class="container-fluid">
+      <div class="movie-card card h-100">
+        <div class="rating">{{ popularM.vote_average }}/10
+        </div>
+        <a [routerLink]="['/showMovie', popularM.id]">
+          <img *ngIf="!popularM.poster_path" src=" https://cdn.xxl.thumbs.canstockphoto.com/cinema-interior-with-big-screen-created-with-generative-ai-cinema-interior-with-a-big-screen-stock-photo_csp111586253.jpg" class="card-img-top" alt="Hollywood Sign on The Hill"/>
+          <img *ngIf="popularM.poster_path"[src]="'https://image.tmdb.org/t/p/w300' + popularM.poster_path" class="card-img-top" alt="Movie Poster" />
+        </a>
+        <!-- <div class="card-body">
+          <h5 class="card-title text-info">{{ popularM.original_title }}</h5>
+        </div> -->
+      </div>
+    </div>
+
+

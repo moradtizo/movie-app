@@ -1,0 +1,11 @@
+
+  <div class="container-fluid">
+      <div class=" d-flex ">
+        <div class=" my-2  mb-4 mx-2" *ngFor="let ite of ImagesMovie">
+          <a href="#">
+                <img class="img-fluid" [src]="'https://image.tmdb.org/t/p/w300'+ite.file_path "  alt="">
+              </a>
+        </div>
+      </div>
+  </div>
+

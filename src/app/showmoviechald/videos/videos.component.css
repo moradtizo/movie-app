@@ -1,0 +1,13 @@
+.dd {
+  max-width: 43%;
+}
+.ff{
+  max-width: 60%;
+}
+.d-flex {
+  display: flex!important;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+

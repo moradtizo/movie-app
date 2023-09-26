@@ -1,0 +1,43 @@
+<div class="row imgch">
+  <img class="img-fluid " [src]="'https://image.tmdb.org/t/p/original'+details.backdrop_path  " alt="">
+
+</div>
+
+<div class="row mt-3 main text-light">
+  <div class="col-md-3">
+  
+    <div class=" mx-3  col-md-9  ">
+       <img class="img-fluid imgd" [src]="'https://image.tmdb.org/t/p/original'+details.poster_path " alt="">
+    </div>
+  </div>
+    <div class="col-md-9 col-sm-5">
+      <h1 class="my-4 mx-auto text-light" >{{ details.name}} <span class="text-dark">({{details.first_air_date | date :'yyyy'}})</span></h1>
+      <h6 class="text-light">{{details.first_air_date | date :'yyyy-mm-dd'}} <span>.</span> <span>({{ details.original_language }})</span><span *ngFor="let genres of details.genres">
+        <h6 class="text-danger">.{{ genres.name }}</h6>
+      </span></h6>
+      <div class="text-start over">
+        <h4 class="my-3 text-light col-md-4"><span class="text-info">O</span>verview</h4>
+      <p class=" text-light fs-4 text fst-lighter m-4">{{ details.overview }}</p>
+    </div>
+        <!-- <ul *ngFor="let genres of details.genres">  
+          <li>{{ genres.name }}</li>
+        </ul>
+        <ul> -->
+         <!-- <li>budget:$<span class="text-info">{{ details.budget }}</span></li>
+        <li>Released:</li>
+        <li>Director:</li>
+        <li>Casts:</li>
+        <li>Tags:</li> -->
+     
+    </div>
+  
+  </div>
+  <div class="col-md-12 text-center mt-2">
+    <button [routerLink]="['similar']" type="button" class="btn btn-primary">Similar</button>
+    <button [routerLink]="['actors']"type="button" class="btn btn-warning">Actors</button>
+    <button [routerLink]="['images']"  type="button" class="btn btn-info">Images</button>
+    <button [routerLink]="['videos']"type="button" class="btn btn-danger">Videos</button>
+  <!-- <button  (click)="sidebarVisible = true"type="button" class="btn btn-info">Info</button>
+  <button  (click)="sidebarVisible = true"type="button" class="btn btn-info">Info</button>
+  <button  (click)="sidebarVisible = true"type="button" class="btn btn-info">Info</button> -->
+  </div>

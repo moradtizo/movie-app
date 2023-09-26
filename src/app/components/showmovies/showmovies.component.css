@@ -1,0 +1,27 @@
+
+.main{
+  background: rgba(159, 159, 159, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.8px);
+  -webkit-backdrop-filter: blur(1.8px);
+/* position: absolute;*/
+ bottom: -150px;
+
+}
+/*.imgd{
+   box-shadow:   1px 1px 20px 0px rgba(174 178 191 / 58%);
+   border-radius: 50%;
+} */
+.imgch{
+  filter: blur(3px);
+  position: relative;
+}
+h6.text-light {
+  margin-top: -22px;
+  margin-left: 23px;
+}
+h6.text-danger{
+  margin-left: 141px;
+}
+
+

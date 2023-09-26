@@ -1,0 +1,15 @@
+
+<div class="container-fluid">
+  <div class="d-flex mt-4 col-md-6 mx-auto">
+    <input class="form-control me-sm-2 mx-auto mt-2" type="search" placeholder="Search" [(ngModel)]="query" (change)="Search()">
+    <button class="btn btn-info mt-2 mx-2 rounded-5" (click)="Search()">Search</button>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2 col-lg-3 col-xl-2 col-sm-6 my-2" *ngFor="let item of search">
+      <app-card [popularM]="item"></app-card>
+    </div>
+  </div>
+</div>
+<p-paginator (onPageChange)="paginate($event)" [rows]="20" [totalRecords]="70000"></p-paginator>
+

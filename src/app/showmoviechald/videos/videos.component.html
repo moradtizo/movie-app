@@ -1,0 +1,8 @@
+
+<div class="container-fluid ">
+  <div class="d-flex ">
+    <div class="card  my-2 mx-2" *ngFor="let video of VideosMovie" style="height: 100%;">
+      <app-youtube-embed [title]="video.name" [key]="video.key"></app-youtube-embed>
+    </div>
+</div>
+

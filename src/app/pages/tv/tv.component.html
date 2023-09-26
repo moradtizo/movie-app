@@ -1,0 +1,26 @@
+
+<div class="row">
+  <div class="col-md-12">
+   <div id="carouselExampleDark" class="carousel carousel slide " data-bs-ride="carousel">
+<app-tv-slider [itemsTv]="popularTv" ></app-tv-slider>
+</div>
+</div>
+</div>
+<div class="row">
+ <div class="col-md-12 ">
+   <h3 class="my-5 text-center">
+     <span class="text-info">P</span>opular <span class="text-info">T</span>v
+   </h3>
+ </div>
+</div>
+<div class="contaner-fluid">
+<div class="row">
+
+ <div class="col-md-2 col-lg-3 col-xl-2 col-sm-6 my-2" *ngFor="let item of popularTv">
+
+<app-tv-card [popularTv]="item"></app-tv-card>
+
+
+ </div>
+</div>
+</div>
